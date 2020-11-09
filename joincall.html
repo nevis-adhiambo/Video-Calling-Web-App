@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.2.1.js"></script>
+    <title>Video Calling App</title>
+    <style type="text/css">
+    	body{
+    		font-size: 16px;
+		    background-color: #6f42c1;
+		    height: 100vh;
+    	}
+    	.container{
+    		padding: 1rem;
+    	}
+    	.wrapper{
+    		display: flex;
+    		justify-content: space-around;
+    	}
+    	.me, .remote-container{
+    		height: 300px;
+    		width: 300px;
+    		border-radius: .5rem;
+    		border-color: #ccc;    	
+    	}
+    	@media(max-width: 768px){
+    		.wrapper{
+    			display: block;
+    		}
+    	}
+    	.icons{
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    	}
+    	.icons>div{
+    		font-size: 2rem;
+            cursor: pointer;
+    	}
+    	i{
+    		margin-right: 2rem;    		
+    		color: #fff;
+    	}
+
+    </style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<div class="me"></div>
+			<div class="remote-container"></div>
+		</div>
+		<div class="icons">
+			<div>
+				<i id="disable-camera" class="fa fa-camera"></i>
+			</div>
+			<div>
+				<i id="disconnect-call" class="fa fa-phone"></i>
+			</div>
+			<div>
+				<i id="mute-mic" class="fa fa-microphone"></i>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>

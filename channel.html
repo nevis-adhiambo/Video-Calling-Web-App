@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Video Calling App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper py-4">            
+            <form class="shadow">
+                <p class="text-center"><strong >Agora Join Call</strong></p>
+                <label for="username">Channel Name</label>
+                <input type="text" name="Cname" value="" placeholder="Enter the channel name" id="name" required>
+                <label for="password"> Channel password</label>
+                <input type="password" name="Cpassword" value="" placeholder="Fill in the call password" class="mb-3">
+                <button class="btn  btn-block" onclick="storeChannelName()">Join call </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function storeChannelName() {
+            var channelName = document.getElementById("name").value;            
+            localStorage.setItem("channelname", channelName);
+            window.location.href = "joincall.html"
+        }
+    </script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

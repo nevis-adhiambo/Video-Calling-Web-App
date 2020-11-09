@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="775736869536-l33p9heuljm1i6ito25a2n5dsulsvg31.apps.googleusercontent.com.apps.googleusercontent.com">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Video Calling App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper py-4">            
+            <form class="shadow">
+                <p class="text-center"><strong >Agora Sign In</strong></p>
+                <label for="username">Username</label>
+                <input type="text" name="username" value="" placeholder="Enter your Username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" value="" placeholder="Fill in your password" class="mb-3">
+                <button class="btn  btn-block" onclick="window.location.href='channel.html'">Sign In </button>
+                <hr>
+                <div class="g-signin2 text-center" data-onsuccess="onSignIn"></div>
+
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+          updateName(profile.getName());
+          window.location.href= 'channel.html'
+        }
+        function updateName(name){
+            document.getElementById("username").value = name;
+        }
+
+    </script>
+</body>
+
+</html>
