@@ -79,7 +79,7 @@ var stream = AgoraRTC.createStream({
 })
 
 //initializing 
-client.init("b9550818738f465e9cf70623d270d9f8", function() {
+client.init("2a127d0dea9145c09b5c86d854b0da87", function() {
     console.log("success!");
 })
 
